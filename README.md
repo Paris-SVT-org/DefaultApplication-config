@@ -1,3 +1,3 @@
 # DefaultApplication-config
 
-http://HOST:PORT/DefaultApplication/HitCount.jsp
+http://HOST:PORT/HitCount.jsp

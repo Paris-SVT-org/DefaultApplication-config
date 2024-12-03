@@ -1,0 +1,12 @@
+version: 1.0
+app:
+  maven:
+    groupId: "DefaultApplication"
+    artifactId: "DefaultApplication"
+    version: "ee7"
+    type: ear
+  instances:
+    min: 1
+    max: 1
+  java: 17
+  endpoints: public

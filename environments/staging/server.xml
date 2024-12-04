@@ -6,6 +6,8 @@
 
     <httpEndpoint host="*" httpPort="9080" httpsPort="9443" id="defaultHttpEndpoint"/>
 
+    <quickStartSecurity userName="admin" userPassword="{xor}PjsyNjEvKDs=" />
+
     <applicationManager autoExpand="true"/>
 
     <enterpriseApplication contextRoot="/" id="DefaultApplication" location="${server.config.dir}/apps/DefaultApplication.ear">

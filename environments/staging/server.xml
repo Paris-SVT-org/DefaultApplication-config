@@ -6,20 +6,30 @@
 
     <httpEndpoint host="*" httpPort="9080" httpsPort="9443" id="defaultHttpEndpoint"/>
 
-	<!-- Basic Registry -->
     <basicRegistry id="basic" realm="basicRealm">
       <user name="persona1" password="ppersona1"/>
       <user name="persona2" password="ppersona2"/>
-      <user name="persona3" password="ppersona3"/>
-      <user name="persona4" password="ppersona4"/>
+      <user name="persona3" password="ppersona3"/>	    
+      <group name="admin">
+       <member name="persona1" />
+      </group>
+      <group name="users">
+       <member name="persona1" />
+       <member name="persona2" />
+       <member name="persona3" />
+      </group>
     </basicRegistry>
+
+    <administrator-role>
+     <user>persona1</user>
+    </administrator-role>	
     
     <applicationManager autoExpand="true"/>
 
     <enterpriseApplication contextRoot="/" id="DefaultApplication" location="${server.config.dir}/apps/DefaultApplication.ear">
      <application-bnd>
-      <security-role id="SecurityRole_1" name="All Role">
-       <user name="persona1"/>
+      <security-role name="All Role">
+       <group name="admin"/>
       </security-role>
      </application-bnd>        
     </enterpriseApplication>

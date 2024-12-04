@@ -6,15 +6,20 @@
 
     <httpEndpoint host="*" httpPort="9080" httpsPort="9443" id="defaultHttpEndpoint"/>
 
-    <quickStartSecurity userName="admin" userPassword="adminpwd" />
-
+	<!-- Basic Registry -->
+    <basicRegistry id="basic" realm="basicRealm">
+      <user name="persona1" password="ppersona1"/>
+      <user name="persona2" password="ppersona2"/>
+      <user name="persona3" password="ppersona3"/>
+      <user name="persona4" password="ppersona4"/>
+    </basicRegistry>
+    
     <applicationManager autoExpand="true"/>
 
     <enterpriseApplication contextRoot="/" id="DefaultApplication" location="${server.config.dir}/apps/DefaultApplication.ear">
      <application-bnd>
-      <security-role id="SecurityRole_1">
-       <user name="admin"/>
-       <special-subject type="ALL_AUTHENTICATED_USERS"/>
+      <security-role id="SecurityRole_1" name="All Role">
+       <user name="persona1"/>
       </security-role>
      </application-bnd>        
     </enterpriseApplication>

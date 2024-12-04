@@ -11,7 +11,11 @@
     <applicationManager autoExpand="true"/>
 
     <enterpriseApplication contextRoot="/" id="DefaultApplication" location="${server.config.dir}/apps/DefaultApplication.ear">
+     <application-bnd>
+      <security-role name="All Role">
+       <user name="admin"/>
+      </security-role>
+     </application-bnd>
     </enterpriseApplication>
-
-    
+   
 </server>

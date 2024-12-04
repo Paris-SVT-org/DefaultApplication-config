@@ -12,8 +12,9 @@
 
     <enterpriseApplication contextRoot="/" id="DefaultApplication" location="${server.config.dir}/apps/DefaultApplication.ear">
      <application-bnd>
-      <security-role name="All Role">
+      <security-role id="SecurityRole_1">
        <user name="admin"/>
+       <special-subject type="ALL_AUTHENTICATED_USERS"/>
       </security-role>
      </application-bnd>        
     </enterpriseApplication>

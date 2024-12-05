@@ -5,33 +5,10 @@
     </featureManager>
 
     <httpEndpoint host="*" httpPort="9080" httpsPort="9443" id="defaultHttpEndpoint"/>
-
-    <basicRegistry id="basic" realm="basicRealm">
-      <user name="persona1" password="ppersona1"/>
-      <user name="persona2" password="ppersona2"/>
-      <user name="persona3" password="ppersona3"/>	    
-      <group name="admin">
-       <member name="persona1" />
-      </group>
-      <group name="users">
-       <member name="persona1" />
-       <member name="persona2" />
-       <member name="persona3" />
-      </group>
-    </basicRegistry>
-
-    <administrator-role>
-     <user>persona1</user>
-    </administrator-role>	
     
     <applicationManager autoExpand="true"/>
 
     <enterpriseApplication contextRoot="/" id="DefaultApplication" location="${server.config.dir}/apps/DefaultApplication.ear">
-     <application-bnd>
-      <security-role id="SecurityRole_1">
-       <group name="admin"/>
-      </security-role>
-     </application-bnd>        
     </enterpriseApplication>
    
 </server>

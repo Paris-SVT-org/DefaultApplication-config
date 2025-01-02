@@ -10,5 +10,6 @@
 
     <enterpriseApplication contextRoot="/" id="DefaultApplication" location="${server.config.dir}/apps/DefaultApplication.ear">
     </enterpriseApplication>
-   
+
+    
 </server>

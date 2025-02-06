@@ -18,3 +18,7 @@ Transaction type
 - Rollback : trans=RLB
 
 Don't select 'Enterprise Java Bean (CMP)' but other radio button options should work successfully.
+
+<br>Select - Deploy and run your application
+<br>Source repo : https://na.artifactory.swg-devops.com/artifactory/hyc-wassvt-team-maven-virtual
+<br>Config repo : https://github.com/Paris-SVT-org/DefaultApplication-config
